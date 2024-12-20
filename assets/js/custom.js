@@ -216,3 +216,21 @@
     }
 
 })(window.jQuery);
+
+
+
+  // Inisialisasi Isotope
+  var $grid = $('.event_box').isotope({
+    itemSelector: '.event_outer',
+    layoutMode: 'fitRows'
+  });
+
+  // Filter tombol kategori
+  $('.filter-btn').on('click', function() {
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+
+    // Mengubah tombol aktif
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+  });

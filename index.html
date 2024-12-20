@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/livechat.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   
 
@@ -32,93 +33,86 @@
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
+ <!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Logo Start ***** -->
+          <a href="index.html" class="logo" style="display: inline-flex; align-items: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/418/418281.png" 
+                 alt="Scholar Logo" 
+                 style="width: 40px; height: auto;" />
+            <h1 class="ms-2" style="margin-bottom: 0;">HIShoes</h1>
+          </a>
+          <!-- ***** Logo End ***** -->
+          <ul class="nav">
+          
+            <li class="scroll-to-section" id="profile-nav" style="display: none;">
+              <a href="#" id="dropdown-toggle">Profile</a>
+              <ul id="dropdown-menu" style="display: none;">
+                <li><a href="#" id="user-profile-name">View Profile</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
+              </ul>
+            </li>
+            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+            <li class="scroll-to-section"><a href="#products">Products</a></li>
+            <li class="scroll-to-section" id="signup-nav" style="margin-right: 20px;">
+              <a href="signup.html" class="active">Signup</a>
+            </li>            
+          </ul>
+          <!-- ***** Serach Start ***** -->
+          <div class="search-input" style="float: right;">
+            <form id="search" action="#">
+              <input type="text" placeholder="Type Something" id="searchText" name="searchKeyword" onkeypress="handle" />
+              <i class="fa fa-search"></i>
+            </form>
+          </div>
+          <!-- ***** Serach End ***** -->
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                  <a href="index.html" class="logo" style="display: inline-flex; align-items: center;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/864/864685.png" 
-                         alt="Scholar Logo" 
-                         style="width: 40px; height: auto;" />
-                    <h1 class="ms-2" style="margin-bottom: 0;">ESchool</h1>
-                </a>
-                
-   
-
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Serach Start ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Serach Start ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="#courses">Courses</a></li>
-                      <ul>
-                        <li class="scroll-to-section" id="signup-nav"><a href="signup.html" class="active">Signup</a></li>
-                        
-                        <!-- Dropdown Profile & Logout -->
-                        <li class="scroll-to-section" id="profile-nav" style="display: none;">
-                            <a href="#" id="dropdown-toggle">Profile</a>
-                            <ul id="dropdown-menu" style="display: none;">
-                                <li><a href="#" id="user-profile-name">View Profile</a></li>
-                                <li><a href="#" id="logout-btn">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a href="#" id="livechat-button" class="livechat-button" title="Livechat" onclick="toggleChatWindow()">
-                      <img src="https://cdn-icons-png.flaticon.com/128/1370/1370907.png" alt="Live Chat" class="livechat-icon"> <!-- Gambar Icon Chat -->
-                    </a>
-                  
-                    <!-- Live Chat Window -->
-                    <div id="chat-window" class="chat-window">
-                      <div class="chat-header">
-                        <span>Live Chat</span>
-                        <button id="close-chat" onclick="toggleChatWindow()">X</button>
-                      </div>
-                      <div id="chat-messages" class="chat-messages">
-                        <div class="chat-message bot">Hello! How can I assist you today?</div>
-                      </div>
-                      <div class="chat-input">
-                        <input type="text" id="user-input" placeholder="Type your message..." onkeyup="handleInput(event)">
-                        <button onclick="sendMessage()">Send</button>
-                      </div>
-                    </div>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+          <a href="#" id="livechat-button" class="livechat-button" title="Livechat" onclick="toggleChatWindow()">
+            <img src="https://cdn-icons-png.flaticon.com/128/1370/1370907.png" alt="Live Chat" class="livechat-icon"> <!-- Gambar Icon Chat -->
+          </a>
+        
+          <!-- Live Chat Window -->
+          <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+              <span>Live Chat</span>
+              <button id="close-chat" onclick="toggleChatWindow()">X</button>
             </div>
-        </div>
+            <div id="chat-messages" class="chat-messages">
+              <div class="chat-message bot">Hello! How can I assist you today?</div>
+            </div>
+            <div class="chat-input">
+              <input type="text" id="user-input" placeholder="Type your message..." onkeyup="handleInput(event)">
+              <button onclick="sendMessage()">Send</button>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-
-  <div class="main-banner" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-carousel owl-banner">
-            <div class="item item-3">
-              <div class="header-text">
-                <span class="category">Online Learning</span>
-                <h2>Online Learning helps you save the time</h2>
-                <p>Online learning allows you to study at your own pace, from anywhere, and at any time. It's a flexible way to gain knowledge and skills, without the constraints of traditional classroom learning.</p>
-                <div class="buttons">
-                  <div class="main-button">
-                    <a href="#">Request Demo</a>
-                  </div>
-                  <div class="icon-button">
-                    <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
-                  </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<div class="main-banner" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="owl-carousel owl-banner">
+          <div class="item item-3">
+            <div class="header-text">
+              <!-- Mengganti kategori dengan ikon sepatu dari Font Awesome -->
+              <span class="category"><i class="fa fa-shoe-prints"></i></span>
+              <h2>Discover Your Perfect Pair of Shoes</h2>
+              <p>Explore our wide range of stylish and comfortable shoes for all occasions. Whether you're looking for casual wear or sports shoes, we have something for everyone.</p>
+              <div class="buttons">
+                <div class="main-button">
+                  <a href="#">Shop Now</a>
+                </div>
+                <div class="icon-button">
+                  <!-- Tambahkan ikon jika diperlukan di sini -->
                 </div>
               </div>
             </div>
@@ -127,199 +121,157 @@
       </div>
     </div>
   </div>
-  <div class="section about-us">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-1">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Where shall we begin?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                We start with the foundation: the basics of learning and growth. Our approach is focused on practical knowledge, helping you to build the skills you need to succeed.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                How do we work together?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Collaboration is at the heart of everything we do. By working together, we share knowledge and strategies that can help you achieve your goals faster and more efficiently.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Why ESchool is the best?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                ESchool offers a comprehensive and flexible learning experience, with a wide range of courses designed to meet your needs, whether you're just starting or advancing your career.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Do we get the best support?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Our support team is always ready to assist you. Whether you're looking for guidance on a course or need technical help, we are committed to providing the best support possible.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 align-self-center">
-                <div class="section-heading">
-                    <h6>About Us</h6>
-                    <h2>What makes us the best online academy?</h2>
-                    <p>At ESchool, we are committed to offering high-quality education that empowers students to achieve their goals. With expert instructors, personalized support, and a flexible learning environment, we ensure a transformative educational experience.</p>
-                    <div class="main-button">
-                        <a href="#">Discover More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+<section class="section courses" id="products">
+  <div class="container">
+    <!-- Kategori Filter Bar (Navbar style) -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="category-filter">
+          <button class="filter-btn active" data-filter="*">All</button>
+          <button class="filter-btn" data-filter=".casual">Casual</button>
+          <button class="filter-btn" data-filter=".sports">Sports</button>
+          <button class="filter-btn" data-filter=".formal">Formal</button>
+          <button class="filter-btn" data-filter=".outdoor">Outdoor</button>
+        </div>
+      </div>
+    </div>
 
-  <section class="section courses" id="courses" >
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Latest Courses</h6>
-            <h2>Latest Courses</h2>
+    <!-- Judul dan Deskripsi -->
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="section-heading">
+          <h6>Products</h6>
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- Daftar Produk -->
+    <div class="row event_box">
+      <!-- Casual Products -->
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer casual">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>50</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Comfortable Running Shoes</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer casual">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>50</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Comfortable Running Shoes</h4>
           </div>
         </div>
       </div>
 
-      <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
-              <span class="category">Webdesign</span>
-              <span class="price"><h6><em>$</em>15</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Rosa</span>
-              <h4>Learn Web Design</h4>
-            </div>
+      <!-- Sports Products -->
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer sports">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>75</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Professional Running Shoes</h4>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
-              <span class="category">Development</span>
-              <span class="price"><h6><em>$</em>15</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Cindy</span>
-              <h4>Web Tips</h4>
-            </div>
+      </div>
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer sports">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>75</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Professional Running Shoes</h4>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
-              <span class="category">Wordpress Tips</span>
-              <span class="price"><h6><em>$</em>15</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Dafa Pandu</span>
-              <h4>Web Trends</h4>
-            </div>
-          </div>
-        </div>
-    </div>
-  </section>
-  
-  <div class="section testimonials">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="owl-carousel owl-testimonials" id="testimonials-carousel">
-                    <!-- Testimonial items will be dynamically added here -->
-                </div>
-            </div>
-            <div class="col-lg-5 align-self-center">
-                <div class="section-heading">
-                    <h6>TESTIMONIALS</h6>
-                    <h2>What they say about us?</h2>
-                    <p>You can share your feedback about our services here:</p>
-                    <form id="testimonial-form">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="category" class="form-label">Your Profession/Role</label>
-                            <input type="text" class="form-control" id="category" placeholder="Enter your profession" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Your Testimonial</label>
-                            <textarea class="form-control" id="message" rows="3" placeholder="Write your testimonial" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Testimonial</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+      </div>
 
-  <div class="contact-us section" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6  align-self-center">
+      <!-- Formal Products -->
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer formal">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>100</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Elegant Formal Shoes</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer formal">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>100</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Elegant Formal Shoes</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outdoor Products -->
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer outdoor">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>120</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Durable Hiking Shoes</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer outdoor">
+        <div class="events_item">
+          <div class="thumb">
+            <a href="#"><img src="https://images-cdn.ubuy.co.id/655b5e9577442d74860aa414-fashion-running-sneaker-for-men-shoes.jpg" alt=""></a>
+            <span class="price"><h6><em>$</em>120</h6></span>
+          </div>
+          <div class="down-content">
+            <h4>Durable Hiking Shoes</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section about-us">
+  <div class="container">
+    <div class="row">
+      <!-- Bagian Contact Us di kiri -->
+      <div class="col-lg-6">
+        <div class="contact-us section" id="contact">
           <div class="section-heading">
             <h6>Subscribe</h6>
-            <div class="special-offer">
-              <span class="offer"><br><em></em></span>
-              <h6><em></em></h6>
-              <h4>Subscribe Us</h4>
-              <a href="#"><i class="fa fa-angle-right"></i></a>
-            </div>
+            <br>
           </div>
-        </div>
-        <div class="col-lg-6">
           <div class="contact-us-content">
             <form id="contact-form" action="" method="post">
               <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 mb-3">
+                </div>
+                <div class="col-lg-12 mb-3">
                   <fieldset>
-                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required class="form-control">
                   </fieldset>
+                </div>
+                <div class="col-lg-12 mb-3">
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                    <button type="submit" id="form-submit" class="orange-button">Send</button>
                   </fieldset>
                 </div>
               </div>
@@ -327,13 +279,56 @@
           </div>
         </div>
       </div>
+      <!-- Bagian About Us di kanan -->
+      <div class="col-lg-5 offset-lg-1 align-self-center" style="background-image: url(''); background-size: cover; background-position: center; padding: 60px; color: #fff;">
+        <div class="section-heading">
+          <h6>About Us</h6>
+          <h2>Why Our Shoes Are the Best in the Market</h2>
+          <p>At our store, we believe in delivering high-quality shoes that blend style, comfort, and durability. We offer a range of footwear for every occasion, from casual outings to formal events, ensuring you step out in confidence and comfort.</p>
+          <div class="main-button">
+            <a href="#">Shop Our Collection</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+
+<div class="section testimonials">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-7">
+              <div class="owl-carousel owl-testimonials" id="testimonials-carousel">
+                  <!-- Testimonial items will be dynamically added here -->
+              </div>
+          </div>
+          <div class="col-lg-5 align-self-center">
+              <div class="section-heading">
+                  <h6>Review</h6>
+                  <h2>You can share your feedback about our services here:</h2>
+                  
+                  <form id="testimonial-form">
+                      <div class="mb-3">
+                          <label for="name" class="form-label">Your Name</label>
+                          <input type="text" class="form-control" id="names" placeholder="Enter your name" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="message" class="form-label">Your Message</label>
+                          <textarea class="form-control" id="messages" rows="3" placeholder="Write your testimonial" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 ESchool. All rights reserved</a></p>
+        <p>Copyright © 2036 HIShoes. All rights reserved</a></p>
       </div>
     </div>
   </footer>

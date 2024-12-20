@@ -190,13 +190,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-//Testimonial
 document.addEventListener('DOMContentLoaded', () => {
     const testimonialsData = [
         {
             text: "“Please tell your friends or colleagues about our website. Anyone can access and enjoy our services for free. Thank you for visiting!”",
             category: "Full Stack Master",
-            name: "Claude David",
+            name: "Damian",
             image: "assets/images/testimonial-author.jpg",
         },
     ];
@@ -211,17 +210,21 @@ document.addEventListener('DOMContentLoaded', () => {
         div.innerHTML = `
             <p>${testimonial.text}</p>
             <div class="author">
-                <img src="${testimonial.image || 'assets/images/default-author.jpg'}" alt="${testimonial.name}">
-                <span class="category">${testimonial.category}</span>
                 <h4>${testimonial.name}</h4>
             </div>
         `;
+
+        // Menambahkan styling untuk latar belakang
+        div.style.backgroundColor = '#926dced0';  // Menambahkan warna latar belakang
+        div.style.borderRadius = '10px';  // Menambahkan border-radius agar lebih halus
+        div.style.padding = '20px';  // Memberikan jarak di dalam elemen
+
         return div;
     };
 
     // Fungsi untuk memuat testimonial ke dalam carousel
     const loadTestimonials = () => {
-        carousel.innerHTML = '';
+        carousel.innerHTML = '';  // Menghapus semua testimonial sebelumnya
         testimonialsData.forEach((testimonial) => {
             const testimonialItem = createTestimonialItem(testimonial);
             carousel.appendChild(testimonialItem);
@@ -246,24 +249,27 @@ document.addEventListener('DOMContentLoaded', () => {
     testimonialForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.getElementById('name').value.trim();
-        const category = document.getElementById('category').value.trim();
-        const message = document.getElementById('message').value.trim();
+        // Ambil nilai input dan log hasilnya
+        const name = document.getElementById('names').value.trim();
+        const message = document.getElementById('messages').value.trim();
 
-        if (!name || !category || !message) {
+        console.log("Names:", name);       // Debugging nilai name
+        console.log("Messages:", message);  // Debugging nilai message
+
+        // Jika nilai input kosong
+        if (!name || !message) {
             alert('All fields are required!');
             return;
         }
 
+        // Menambahkan tanda petik di sekitar message dan category
         const newTestimonial = {
-            text: message,
-            category: category,
+            text: `"${message}"`,    // Menambahkan tanda petik di sekitar message 
             name: name,
-            image: 'assets/images/default-author.jpg', // Default image jika tidak ada upload
         };
 
         testimonialsData.push(newTestimonial); // Tambahkan testimonial ke data
-        loadTestimonials(); // Refresh carousel
+        loadTestimonials(); // Refresh carousel dengan testimonial baru
         testimonialForm.reset(); // Reset form
         alert('Thank you for your testimonial!');
     });

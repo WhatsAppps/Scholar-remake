@@ -4,6 +4,7 @@
 .owl-carousel {
   display: none;
   width: 100%;
+
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
@@ -222,4 +223,18 @@
 .owl-testimonials .item.hidden {
   opacity: 0; /* Sembunyikan elemen jika tidak digunakan */
   pointer-events: none;
+}
+#testimonials-carousel .owl-item {
+  background-color: #926dced0 !important; /* Ubah latar belakang item carousel */
+  border-radius: 10px !important; /* Memberikan border-radius agar sudut lebih halus */
+  padding: 20px !important; /* Memberikan jarak di dalam item carousel */
+}
+
+#testimonials-carousel .owl-dots .owl-dot span {
+  background-color: #926dced0 !important; /* Mengubah warna titik navigasi (dots) */
+}
+
+#testimonials-carousel .owl-nav .owl-prev, 
+#testimonials-carousel .owl-nav .owl-next {
+  color: #926dced0 !important; /* Mengubah warna tombol navigasi */
 }

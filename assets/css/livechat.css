@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #7a6ad8;
+    background-color: #926dced0;
     color: white;
     padding: 12px;
     border-radius: 50%;
@@ -15,6 +15,18 @@
     height: 60px;
   }
   
+  /* Close button styling */
+#close-chat {
+  font-size: 24px; /* Increase size of X */
+  background: none;
+  border: none;
+  color: #7e60add0;  /* Set color to the specified soft purple */
+  cursor: pointer;
+}
+
+#close-chat:hover {
+  color: #7a4e9e;  /* Slightly darker shade when hovering */
+}
   #livechat-button img {
     width: 40px; /* Ukuran gambar icon */
     height: 40px; /* Ukuran gambar icon */
@@ -36,7 +48,7 @@
   }
   
   .chat-header {
-    background-color: #7a6ad8;
+    background-color: #926dced0;
     padding: 10px;
     color: white;
     font-size: 16px;
@@ -65,7 +77,7 @@
   }
   
   .chat-message.user {
-    background-color: #7a6ad8;
+    background-color: #926dced0;
     color: white;
     align-self: flex-end;
   }
@@ -84,7 +96,7 @@
   }
   
   .chat-input button {
-    background-color: #7a6ad8;
+    background-color: #926dced0;
     color: white;
     padding: 10px;
     margin-left: 8px;
